@@ -1,0 +1,27 @@
+<odoo>
+    <record id="view_cheque_form" model="ir.ui.view">
+        <field name="name">cheque.management.form</field>
+        <field name="model">cheque.management</field>
+        <field name="arch" type="xml">
+            <form string="Cheque">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="partner_id"/>
+                        <field name="amount"/>
+                        <field name="issue_date"/>
+                        <field name="due_date"/>
+                        <field name="state"/>
+                        <field name="note"/>
+                    </group>
+                    <footer>
+                        <button name="action_endorse_to_supplier" type="object" string="Endorse to Supplier" class="btn-primary"/>
+                        <button name="action_deposit_to_bank" type="object" string="Deposit to Bank" class="btn-primary"/>
+                        <!-- Correct report action for PDF generation -->
+                        <button name="%(cheque_management.report_cheque_document)d" type="action" string="Print Cheque Report" class="btn-secondary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

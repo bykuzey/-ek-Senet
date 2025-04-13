@@ -1,0 +1,25 @@
+<odoo>
+    <template id="report_cheque_document">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <h2>Cheque Report</h2>
+                <table class="table table-condensed">
+                    <tr>
+                        <th>Cheque Number</th>
+                        <th>Amount</th>
+                        <th>Issue Date</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td><span t-field="doc.name"/></td>
+                        <td><span t-field="doc.amount"/></td>
+                        <td><span t-field="doc.issue_date"/></td>
+                        <td><span t-field="doc.due_date"/></td>
+                        <td><span t-field="doc.state"/></td>
+                    </tr>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>

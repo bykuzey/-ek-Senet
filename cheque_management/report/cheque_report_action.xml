@@ -1,0 +1,11 @@
+<odoo>
+    <report
+        id="report_cheque_document"
+        model="cheque.management"
+        string="Cheque Report"
+        report_type="qweb-pdf"
+        name="cheque_management.report_cheque_document"
+        file="cheque_management.report_cheque_document"
+        print_report_name="'Cheque Report - ' + object.name"
+    />
+</odoo>
